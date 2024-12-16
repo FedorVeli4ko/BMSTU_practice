@@ -1,14 +1,13 @@
-def find_max(num):
+def find_min(num):
     if not num:
         print ("Список не должен быть пустым")
     else:
-        maxn = num[0]
+        minn = num[0]
         for n in num:
-            if n > maxn:
-                maxn = n
-        return maxn
+            if n < minn:
+                minn = n
+        return minn
     
-
 n = int(input("Введите количество чисел: "))
 if n <= 0:
         print ("Количество чисел должно быть положительным")
@@ -18,4 +17,4 @@ for i in range(n):
         number = float(input(f"Введите число {i + 1}: "))
         nums.append(number)
 
-print("Максимум:", find_max(nums))
+print("Минимум:", find_min(nums))
