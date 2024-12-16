@@ -1,14 +1,13 @@
 def find_max(num):
-    return max(num)
     if not num:
         print ("Список не должен быть пустым")
-    maxn = num[0]
-    for n in num:
-        if n > maxn:
-            maxn = n
     else:
-         return maxn
-    return max
+        maxn = num[0]
+        for n in num:
+            if n > maxn:
+                maxn = n
+        return maxn
+    
 
 n = int(input("Введите количество чисел: "))
 if n <= 0:
